@@ -1,7 +1,7 @@
 # AWS re/Start Cloud Learning Journey
 
 ## Overview
-Hi, I'm Dipti Aswal. This repository documents my learning journey through the **12-week AWS re/Start program**.  
+Hi, I'm **Dipti Aswal**. This repository documents my learning journey through the **12-week AWS re/Start program**.  
 I am building hands-on skills in:
 
 - **Cloud infrastructure**  
