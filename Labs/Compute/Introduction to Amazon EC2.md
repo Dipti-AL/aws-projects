@@ -1,7 +1,7 @@
 <b>Introduction to Amazon EC2<b>
 Overview
 
-<b>Amazon Elastic Compute Cloud (Amazon EC2)<b> is a web service that provides virtual servers in the cloud. It allows easy adjustment of computing power, making it simple for developers to build and scale applications.
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides virtual servers in the cloud. It allows easy adjustment of computing power, making it simple for developers to build and scale applications.
 
 # Lab: Working with Amazon EC2
 
@@ -15,3 +15,5 @@ This lab covers key Amazon EC2 tasks, including launching, monitoring, and manag
 - Resized the Amazon EC2 instance to scale
 - Tested **termination protection**
 - Terminated the EC2 instance
+
+<img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/99d201a4-876b-4437-85e4-e29bcd542899" />
