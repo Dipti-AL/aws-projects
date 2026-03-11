@@ -2,61 +2,97 @@
 
 **Hi, I'm Dipti Aswal**
 
+---
+
 ## Overview
+This repository documents my learning journey through the **12-week AWS re/Start program**.  
+I am building hands-on skills in:
 
-This is my AWS portfolio which depicts my learning progress through the **12-week AWS re/Start program**, where I am building practical skills in **cloud infrastructure, system administration, networking, security, and AWS services**.
+- **Cloud infrastructure**  
+- **System administration**  
+- **Networking**  
+- **Security**  
+- **AWS services**
 
-The program combines daily technical learning with hands-on labs focused on **deploying, configuring, monitoring, and troubleshooting cloud environments**. The goal is to develop the foundational capabilities required for **cloud support, cloud operations, and junior cloud engineering roles**.
+The program combines **daily technical learning with hands-on labs**, focused on deploying, configuring, monitoring, and troubleshooting cloud environments.  
+The goal is to develop foundational skills for roles in **cloud support, cloud operations, and junior cloud engineering**.
+
+---
 
 ## Weekly Learning Highlights
 
-**Week 1 – Cloud Computing Fundamentals**
-Understanding core cloud concepts including **IaaS, PaaS, SaaS, scalability, elasticity, high availability, fault tolerance, and the shared responsibility model**.
+### Week 1 – Cloud Computing Fundamentals
+- IaaS, PaaS, SaaS  
+- Scalability, elasticity, high availability  
+- Fault tolerance and shared responsibility model  
 
-**Week 2 – Linux System Administration**
-Working with the **Linux command line**, managing files, permissions, system processes, and performing basic **server administration and troubleshooting**.
+### Week 2 – Linux System Administration
+- Linux command line, file and directory management  
+- Permissions and system processes  
+- Basic server administration and troubleshooting  
 
-**Week 3 – Networking Fundamentals**
-Learning **TCP/IP networking, IP addressing, DNS, routing, and network security principles** used in cloud environments.
+### Week 3 – Networking Fundamentals
+- TCP/IP networking, IP addressing, DNS  
+- Routing and network security principles  
 
-**Week 4 – AWS Global Infrastructure**
-Understanding **AWS Regions, Availability Zones, and Edge Locations** and how they support **highly available and fault-tolerant architectures**.
+### Week 4 – AWS Global Infrastructure
+- AWS Regions, Availability Zones, and Edge Locations  
+- Designing highly available and fault-tolerant architectures  
 
-**Week 5 – Compute Services**
-Provisioning and managing **virtual machines**, configuring **secure access (SSH, security groups)**, and understanding **instance lifecycle management**.
+### Week 5 – Compute Services
+- Provisioning and managing virtual machines (EC2)  
+- Secure access: SSH and Security Groups  
+- Instance lifecycle management  
 
-**Week 6 – Storage Services**
-Working with **object, block, and file storage**, data durability concepts, backups, and storage lifecycle management.
+### Week 6 – Storage Services
+- Object, block, and file storage  
+- Data durability and backups  
+- Storage lifecycle management  
 
-**Week 7 – Cloud Networking**
-Designing **Virtual Private Cloud (VPC) architectures**, configuring **subnets, route tables, internet gateways, and network access controls**.
+### Week 7 – Cloud Networking
+- Virtual Private Cloud (VPC) architecture  
+- Subnets, route tables, internet gateways  
+- Network access controls  
 
-**Week 8 – Identity and Access Management**
-Managing **IAM users, roles, and policies**, implementing **least-privilege access**, and securing cloud resources.
+### Week 8 – Identity and Access Management
+- IAM users, roles, and policies  
+- Implementing least-privilege access  
+- Securing cloud resources  
 
-**Week 9 – Monitoring and Observability**
-Understanding **cloud monitoring, logging, system metrics, and alerts** to support operational visibility and troubleshooting.
+### Week 9 – Monitoring and Observability
+- Cloud monitoring and logging  
+- System metrics and alerts  
+- Operational visibility and troubleshooting  
 
-**Week 10 – Automation and Scalability**
-Learning how **load balancing and auto scaling** support highly available and scalable cloud applications.
+### Week 10 – Automation and Scalability
+- Load balancing  
+- Auto Scaling for highly available and scalable applications  
 
-**Week 11 – Cost Management and Optimization**
-Understanding **cloud pricing models, cost monitoring, and resource optimization strategies**.
+### Week 11 – Cost Management and Optimization
+- Cloud pricing models  
+- Cost monitoring and resource optimization  
 
-**Week 12 – Cloud Operations and Troubleshooting**
-Integrating multiple cloud services and practicing **basic cloud operations, troubleshooting, and system reliability concepts**.
+### Week 12 – Cloud Operations and Troubleshooting
+- Integrating multiple AWS services  
+- Cloud operations and system reliability  
+- Troubleshooting cloud environments  
+
+---
 
 ## Tools and Technologies
+- **AWS Cloud Platform**  
+- **Linux Command Line**  
+- **Git and GitHub**  
 
-AWS Cloud Platform
-Linux Command Line
-Git and GitHub
+This portfolio reflects my hands-on exposure to **cloud infrastructure, system administration, networking, security, and operational best practices**.
 
-This repository reflects my hands-on exposure to **cloud infrastructure, system administration, networking, security, and operational best practices**
-Based on my AWS re/Start learning and hands-on experience, I am targeting cloud roles in Switzerland, including:
+---
 
-Cloud Support Engineer / Cloud Support Associate
-Cloud Engineer
-Cloud Operations Engineer
-DevOps / Cloud Infrastructure Trainee
-Cloud Platform Support (Data / AI focus)
+## Targeted Job Roles in Switzerland
+Based on my AWS re/Start learning and hands-on experience, I am targeting entry-level cloud roles:
+
+- **Cloud Support Engineer / Cloud Support Associate**  
+- **Cloud Engineer**  
+- **Cloud Operations Engineer**  
+- **DevOps / Cloud Infrastructure Trainee**  
+- **Cloud Platform Support (Data / AI focus)**
