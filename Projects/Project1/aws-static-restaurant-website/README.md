@@ -60,8 +60,8 @@
 
     **Website url:** 
     http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
-
-    <img src="./images/hero.png" alt="Homepage" width="800">
+    <img src="images/burger.jpg" alt="Burger" width="800">
+    <img src="images/hero.png" alt="Homepage" width="800">
 
     <img src="images/AboutUs.png" alt="About Us" width="800">
 
