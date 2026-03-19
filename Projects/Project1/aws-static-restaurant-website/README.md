@@ -86,9 +86,12 @@
     
     7. Accessed the website via S3 endpoint
 
-**Screenshots**
+
+**Website Screenshots**
+
 
 Website url: 
+
 http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
 A vibrant, welcoming landing page featuring fresh, gourmet ingredients and the modern KetoLife Café aesthetic.
@@ -106,6 +109,7 @@ A beautifully curated gallery showcasing artisan dishes like cauliflower crust p
 Every meal is crafted with locally-sourced ingredients to ensure a delicious experience that nourishes both body and soul.
 
 <img src="images/KetoMenu.png" alt="Keto Menu" width="800">
+
 <img src="images/KetoMenu2.png" alt="Keto Menu" width="800">
 
 A clean, accessible space for the community to easily find our Zurich location and check our daily opening hours.
@@ -113,7 +117,9 @@ A clean, accessible space for the community to easily find our Zurich location a
 The integrated feedback form and direct email link ensure seamless communication and high-quality support for our guests.
 
 <img src="images/ContactUs.png" alt="Contact Us" width="800">
+
 <img src="images/ContactUs2.png" alt="Contact Us" width="800">
+
     
 **Future Enhancements**
 
@@ -135,6 +141,7 @@ The integrated feedback form and direct email link ensure seamless communication
 
         API Gateway to connect frontend and backend
 
+
 **Benefits of Using AWS**
 
     - Scalability – easily handles increasing users
@@ -144,6 +151,16 @@ The integrated feedback form and direct email link ensure seamless communication
     - Cost Efficiency – pay-as-you-go pricing
     
     - Security – controlled access and permissions
+    
+
+**Challenges faced**
+
+    - Corrected mismatches where the code looked for .png but the file was actually .jpg.
+
+    - Fixed broken links caused by using a capital "I" in the folder name instead of lowercase "images".
+
+    - Moved all photos from the main directory into the correct "images" sub-folder so it can be referenced correctly from index.html.
+    
 
 **Key Learnings**
 
@@ -153,12 +170,7 @@ The integrated feedback form and direct email link ensure seamless communication
     
     - Structuring a frontend project for deployment
     
-    - Understanding real-world cloud migration use cases
-
-**Live Demo**
-
-(Add your S3 or GitHub Pages link here)
-
+    - Understanding real-world cloud migration use cases for simple static websites
 
     
 **Conclusion**
