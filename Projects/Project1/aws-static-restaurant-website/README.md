@@ -59,7 +59,7 @@
 ```
 
 
-**AWS components used**
+**AWS Components used**
 
     - Amazon S3
     
@@ -87,6 +87,7 @@
     7. Accessed the website via S3 endpoint
 
 
+
 **Website Screenshots**
 
 
@@ -96,25 +97,33 @@ A vibrant, welcoming landing page featuring fresh, gourmet ingredients and the m
 
 <img src="images/hero.png" alt="Homepage" width="800">
 
+
 This screen introduces our founding team of four  women - Dipti, Svetlana, Valerie, and Zineb.
 
 It also shares our shared mission to blend global flavors with clean eating to create a truly international dining experience.
 
+
 <img src="images/AboutUs.png" alt="About Us" width="800">
+
 
 A beautifully curated gallery showcasing artisan dishes like cauliflower crust pizzas and nutrient-dense lettuce burgers.
 
 Every meal is crafted with locally-sourced ingredients to ensure a delicious experience that nourishes both body and soul.
 
+
 <img src="images/KetoMenu.png" alt="Keto Menu" width="800">
 
+
 <img src="images/KetoMenu2.png" alt="Keto Menu" width="800">
+
 
 A clean, accessible space for the community to easily find our Zurich location and check our daily opening hours.
 
 The integrated feedback form and direct email link ensure seamless communication and high-quality support for our guests.
 
+
 <img src="images/ContactUs.png" alt="Contact Us" width="800">
+
 
 <img src="images/ContactUs2.png" alt="Contact Us" width="800">
 
