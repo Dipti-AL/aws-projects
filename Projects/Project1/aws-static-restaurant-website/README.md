@@ -54,9 +54,10 @@ http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
     aws-static-restaurant/
             ├── index.html                 # Main landing page
             ├── style.css                  # Custom CSS styling
-            ├── images/                    # Custom error page
+            ├── error.html                 # Custom error page
+            ├── images/                    # Images (.png/.jpg)
             │   ├── hero.png
-            │   ├── burger.jpg             # Images (.png/.jpg)   
+            │   ├── burger.jpg                
             │   ├── pizza.jpg
             │   ├── pasta.jpg
             │   ├── curry.jpg
