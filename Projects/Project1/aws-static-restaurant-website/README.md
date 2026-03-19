@@ -12,7 +12,7 @@ Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
 **KetoLife Café**
 
-<img src="images/hero.jpg" alt="Homepage" width="900">
+<img src="images/hero.jpg" alt="Homepage" width="700">
 
 
 **Project Overview**
