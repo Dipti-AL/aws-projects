@@ -59,7 +59,7 @@
 ```
 
 
-**Project Structure**
+**AWS components used**
 
     - Amazon S3
     
@@ -90,17 +90,15 @@
 **Website Screenshots**
 
 
-Website url: 
-
-http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
+Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
 A vibrant, welcoming landing page featuring fresh, gourmet ingredients and the modern KetoLife Café aesthetic.
 
 <img src="images/hero.png" alt="Homepage" width="800">
 
-This screen introduces our founding team of four visionary women — Dipti, Svetlana, Valerie, and Zineb.
+This screen introduces our founding team of four  women - Dipti, Svetlana, Valerie, and Zineb.
 
-It shares our shared mission to blend global flavors with clean eating to create a truly international dining experience.
+It also shares our shared mission to blend global flavors with clean eating to create a truly international dining experience.
 
 <img src="images/AboutUs.png" alt="About Us" width="800">
 
