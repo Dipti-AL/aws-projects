@@ -76,7 +76,7 @@
     
         AWS Lambda for handling orders and bookings
         
-   3. Database
+    3. Database
     
         Amazon DynamoDB for storing customer data
     
