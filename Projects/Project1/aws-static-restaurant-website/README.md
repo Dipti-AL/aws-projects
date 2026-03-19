@@ -14,6 +14,8 @@
 
 **Architecture Flow**
 
+<img src="images/architecture" alt="Homepage" width="800">
+
     1. The user accesses the website through a web browser. 
     
     2. The request is sent to the Amazon S3 static website endpoint.   
@@ -29,6 +31,7 @@
         - No backend server management is needed
         
         - AWS handles availability and scalability automatically
+        
 
 **AWS Services Used**
 
