@@ -13,7 +13,8 @@
     The project also explores how cloud technologies can help small businesses transition to a more efficient digital model.
 
 **Architecture Flow**
-
+<img src="images/burger.jpg" alt="Burger" width="800">
+    <img src="images/hero.png" alt="Homepage" width="800">
     1. The user accesses the website through a web browser. 
     
     2. The request is sent to the Amazon S3 static website endpoint.   
