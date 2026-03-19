@@ -25,7 +25,9 @@ http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
     The project also explores how cloud technologies can help small businesses transition to a more efficient digital model.
 
 
+
 **Architecture Flow**
+
 
 <img src="images/architecture.png" alt="Project Architecture" width="800">
 
