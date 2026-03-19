@@ -14,7 +14,7 @@
 
 **Architecture Flow**
 
-<img src="images/architecture" alt="Homepage" width="800">
+<img src="images/architecture.png" alt="Project Architecture" width="800">
 
     1. The user accesses the website through a web browser. 
     
