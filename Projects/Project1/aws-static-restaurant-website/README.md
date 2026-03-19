@@ -3,7 +3,7 @@
 
 **Creators**
 
-   ** Group 5 - Dipti, Svetlana, Valerie, Zineb**
+ **Group 5 - Dipti, Svetlana, Valerie, Zineb**
 
 **Project Overview**
 
