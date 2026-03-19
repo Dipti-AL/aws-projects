@@ -32,6 +32,24 @@
         
         - AWS handles availability and scalability automatically
         
+**Project Structure**
+```text
+    aws-static-restaurant/
+            ├── index.html
+            ├── style.css
+            ├── images/
+            │   ├── hero.png
+            │   ├── burger.jpg
+            │   ├── pizza.jpg
+            │   ├── pasta.jpg
+            │   ├── curry.jpg
+            │   ├── cauliflower.jpg
+            │   ├── AboutUs.png
+            │   ├── KetoMenu.png
+            │   ├── KetoMenu.png
+            │   └── ContactUs.png
+            │   └── ContactUs2.png
+            └── README.md
 
 **AWS Services Used**
 
@@ -132,22 +150,7 @@ The integrated feedback form and direct email link ensure seamless communication
 
 (Add your S3 or GitHub Pages link here)
 
-**Project Structure**
-```text
-    aws-static-restaurant/
-            ├── index.html
-            ├── style.css
-            ├── images/
-            │   ├── hero.png
-            │   ├── burger.jpg
-            │   ├── pizza.jpg
-            │   ├── curry.jpg
-            │   ├── AboutUs.png
-            │   ├── KetoMenu.png
-            │   ├── KetoMenu.png
-            │   └── ContactUs.png
-            │   └── ContactUs2.png
-            └── README.md
+
     
 **Conclusion**
 
