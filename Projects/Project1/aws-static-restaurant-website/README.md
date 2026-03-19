@@ -1,5 +1,5 @@
 
-**KetoLife Café – Static Website on AWS**
+**Static Website on AWS**
 
 
 **Creators**
@@ -10,7 +10,7 @@
 http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
 
-**KetoLife Café**
+**KetoLife Cafe**
 
 <img src="images/hero.jpg" alt="Homepage" width="700">
 
