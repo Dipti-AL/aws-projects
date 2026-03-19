@@ -7,7 +7,7 @@
 **Group 5 - Dipti, Svetlana, Valerie, Zineb**
 
 
-Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
+http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
 
 **KetoLife Café**
