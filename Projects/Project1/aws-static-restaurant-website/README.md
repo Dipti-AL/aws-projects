@@ -10,8 +10,8 @@
 
     This project demonstrates the design, development, and deployment of a static restaurant website using AWS services. 
     
-    The website was created for KetoLife Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience 
-    and streamlining interactions such as viewing menus and contacting the restaurant.
+    The website was created for KetoLife Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience.
+    Also streamlining interactions such asviewing menus and contacting the restaurant.
     
     The project also explores how cloud technologies can help small businesses transition to a more efficient digital model.
 
