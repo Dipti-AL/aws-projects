@@ -70,13 +70,6 @@
 
     <img src="images/ContactUs.png" alt="Contact Us" width="800">
     <img src="images/ContactUs2.png" alt="Contact Us 2" width="800">
-
-    ![Homepage](hero.png)
-    ![About Us](images/AboutUs.png)
-    ![Keto Menu](images/KetoMenu.png)
-    ![Keto Menu](images/KetoMenu2.png)
-    ![Contact Us](images/ContactUs.png)
-    ![Contact Us](images/ContactUs2.png)
     
 **Future Enhancements**
 
