@@ -58,11 +58,15 @@
 
 **Screenshots**
 
-    (Add your screenshots here)
+    **Website url:** 
+    http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
     
-    ![Homepage](screenshots/homepage.png)
-    ![Menu](screenshots/menu.png)
-    ![S3 Setup](screenshots/s3.png)
+    ![Homepage](images/hero.png)
+    ![About Us](images/AboutUs.png)
+    ![Keto Menu](images/KetoMenu.png)
+    ![Keto Menu](images/KetoMenu2.png)
+    ![Contact Us](images/ContactUs.png)
+    ![Contact Us](images/ContactUs2.png)
     
 **Future Enhancements**
 
