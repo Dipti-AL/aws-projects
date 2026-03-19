@@ -128,10 +128,11 @@ Every meal is crafted with locally-sourced ingredients to ensure a delicious exp
 
 A clean, accessible space for the community to easily find our Zurich location and check our daily opening hours.
 
-The integrated feedback form and direct email link ensure seamless communication and high-quality support for our guests.
-
 
 <img src="images/ContactUs.png" alt="Contact Us" width="800">
+
+
+The integrated feedback form and direct email link ensure seamless communication and high-quality support for our guests.
 
 
 <img src="images/ContactUs2.png" alt="Contact Us" width="800">
