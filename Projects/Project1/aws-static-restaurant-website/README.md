@@ -60,16 +60,15 @@
 
 Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
-<img src="images/burger.jpg" alt="Burger" width="500">
-<img src="images/hero.png" alt="Homepage" width="800">
+<img src="images/hero.png" alt="Homepage" width="500">
 
-<img src="images/AboutUs.png" alt="About Us" width="800">
+<img src="images/AboutUs.png" alt="About Us" width="500">
 
-<img src="images/KetoMenu.png" alt="Keto Menu" width="800">
-<img src="images/KetoMenu2.png" alt="Keto Menu 2" width="800">
+<img src="images/KetoMenu.png" alt="Keto Menu" width="500">
+<img src="images/KetoMenu2.png" alt="Keto Menu 2" width="500">
 
-<img src="images/ContactUs.png" alt="Contact Us" width="800">
-<img src="images/ContactUs2.png" alt="Contact Us 2" width="800">
+<img src="images/ContactUs.png" alt="Contact Us" width="500">
+<img src="images/ContactUs2.png" alt="Contact Us 2" width="500">
     
 **Future Enhancements**
 
