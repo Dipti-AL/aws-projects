@@ -133,13 +133,21 @@ The integrated feedback form and direct email link ensure seamless communication
 (Add your S3 or GitHub Pages link here)
 
 **Project Structure**
-    ketolife-cafe/
-    │
-    ├── index.html
-    ├── style.css
-    ├── images/
-    ├── screenshots/
-    └── README.md
+```text
+    aws-static-restaurant/
+            ├── index.html
+            ├── style.css
+            ├── images/
+            │   ├── hero.png
+            │   ├── burger.jpg
+            │   ├── pizza.jpg
+            │   ├── curry.jpg
+            │   ├── AboutUs.png
+            │   ├── KetoMenu.png
+            │   ├── KetoMenu.png
+            │   └── ContactUs.png
+            │   └── ContactUs2.png
+            └── README.md
     
 **Conclusion**
 
