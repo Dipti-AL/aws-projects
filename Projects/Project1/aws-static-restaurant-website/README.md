@@ -4,11 +4,11 @@
 
 **Creators**
 
- **Group 5 - Dipti, Svetlana, Valerie, Zineb**
+**Group 5 - Dipti, Svetlana, Valerie, Zineb**
 
- Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
+Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
-**KetoLife Café **
+**KetoLife Café**
 
 <img src="images/hero.png" alt="Homepage" width="800">
 
