@@ -5,12 +5,16 @@
 
     Dipti, Svetlana, Valerie, Zineb
 
+
 **Project Overview**
 
     This project demonstrates the design, development, and deployment of a static restaurant website using AWS services. 
-    The website was created for KetoLife Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience and streamlining interactions such as viewing menus and contacting the restaurant.
+    
+    The website was created for KetoLife Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience 
+    and streamlining interactions such as viewing menus and contacting the restaurant.
     
     The project also explores how cloud technologies can help small businesses transition to a more efficient digital model.
+
 
 **Architecture Flow**
 
@@ -32,28 +36,30 @@
         
         - AWS handles availability and scalability automatically
         
+
 **Project Structure**
 
 ```text
     aws-static-restaurant/
-            ├── index.html
-            ├── style.css
-            ├── images/
+            ├── index.html                 # Main landing page
+            ├── style.css                  # Custom CSS styling
+            ├── images/                    # Custom error page
             │   ├── hero.png
-            │   ├── burger.jpg
+            │   ├── burger.jpg             # Images (.png/.jpg)   
             │   ├── pizza.jpg
             │   ├── pasta.jpg
             │   ├── curry.jpg
             │   ├── cauliflower.jpg
-            │   ├── AboutUs.png
+            │   ├── AboutUs.png            # UI captures for documentation
             │   ├── KetoMenu.png
             │   ├── KetoMenu.png
             │   └── ContactUs.png
             │   └── ContactUs2.png
-            └── README.md
+            └── README.md                  # Project documentation
 
 
-**AWS Services Used**
+
+**Project Structure**
 
     - Amazon S3
     
@@ -62,6 +68,7 @@
     - Storage for HTML, CSS, and images
     
     - Public access configuration
+
 
 **Deployment Steps**
 
