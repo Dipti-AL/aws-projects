@@ -1,4 +1,4 @@
-
+10
 **KetoLife Café – Static Website on AWS**
 
 
@@ -8,9 +8,11 @@
 
 Website url: http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
 
+
 **KetoLife Café**
 
-<img src="images/hero.png" alt="Homepage" width="800">
+<img src="images/hero.png" alt="Homepage" width="1000">
+
 
 **Project Overview**
 
