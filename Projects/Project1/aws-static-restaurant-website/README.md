@@ -7,46 +7,51 @@
 
 **Project Overview**
 
-    This project demonstrates the design, development, and deployment of a static restaurant website using AWS services. The website was created for KetoLife          Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience and streamlining interactions such as viewing menus        and contacting the restaurant.
+    This project demonstrates the design, development, and deployment of a static restaurant website using AWS services. 
+    The website was created for KetoLife Café, a keto-focused restaurant concept based in Zurich, with the goal of improving customer experience and streamlining interactions such as viewing menus and contacting the restaurant.
     
     The project also explores how cloud technologies can help small businesses transition to a more efficient digital model.
 
 **Architecture Flow**
 
-    The user accesses the website through a web browser.    
-    The request is sent to the Amazon S3 static website endpoint.    
-    S3 retrieves the requested files (HTML, CSS, images).    
-    The website is rendered in the user’s browser.    
-    This architecture is serverless, meaning:
+    1. The user accesses the website through a web browser.    
+    
+    2. The request is sent to the Amazon S3 static website endpoint.   
+    
+    3. S3 retrieves the requested files (HTML, CSS, images).  
+    
+    4. The website is rendered in the user’s browser.    
+    
+    5. This architecture is serverless, meaning:
         - No EC2 instances are required    
         - No backend server management is needed
         - AWS handles availability and scalability automatically
 
 **AWS Services Used**
 
-    Amazon S3
+    - Amazon S3
     
-    Static website hosting
+    - Static website hosting
     
-    Storage for HTML, CSS, and images
+    - Storage for HTML, CSS, and images
     
-    Public access configuration
+    - Public access configuration
 
 **Deployment Steps**
 
-    Created HTML and CSS files for the website
+    1. Created HTML and CSS files for the website
     
-    Organized assets (images, styles)
+    2. Organized assets (images, styles)
     
-    Created an S3 bucket
+    3. Created an S3 bucket
     
-    Enabled static website hosting
+    4. Enabled static website hosting
     
-    Uploaded all website files
+    5. Uploaded all website files and images
     
-    Configured bucket policy for public access
+    6. Configured bucket policy for public access
     
-    Accessed the website via S3 endpoint
+    7. Accessed the website via S3 endpoint
 
 **Screenshots**
 
@@ -55,45 +60,46 @@
     ![Homepage](screenshots/homepage.png)
     ![Menu](screenshots/menu.png)
     ![S3 Setup](screenshots/s3.png)
+    
 **Future Enhancements**
 
     To make the application more dynamic and production-ready:
 
-    **User Authentication**
+    1. **User Authentication**
     
-    Amazon Cognito for login and sign-up
+        Amazon Cognito for login and sign-up
     
-    **Backend Processing**
+    2. **Backend Processing**
     
-    AWS Lambda for handling orders and bookings
+        AWS Lambda for handling orders and bookings
     
-    **Database**
+    3. **Database**
     
-    Amazon DynamoDB for storing customer data
+        Amazon DynamoDB for storing customer data
     
-    **API Integration**
+    4. **API Integration**
 
-    API Gateway to connect frontend and backend
+        API Gateway to connect frontend and backend
 
 **Benefits of Using AWS**
 
-    Scalability – easily handles increasing users
+    - Scalability – easily handles increasing users
     
-    High Availability – reliable hosting infrastructure
+    - High Availability – reliable hosting infrastructure
     
-    Cost Efficiency – pay-as-you-go pricing
+    - Cost Efficiency – pay-as-you-go pricing
     
-    Security – controlled access and permissions
+    - Security – controlled access and permissions
 
 **Key Learnings**
 
-    Hosting static websites using Amazon S3
+    - Hosting static websites using Amazon S3
     
-    Managing bucket policies and permissions
+    - Managing bucket policies and permissions
     
-    Structuring a frontend project for deployment
+    - Structuring a frontend project for deployment
     
-    Understanding real-world cloud migration use cases
+    - Understanding real-world cloud migration use cases
 
 **Live Demo**
 
