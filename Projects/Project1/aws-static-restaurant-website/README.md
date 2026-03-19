@@ -161,17 +161,6 @@ The integrated feedback form and direct email link ensure seamless communication
         API Gateway to connect frontend and backend
 
 
-**Benefits of Using AWS**
-
-    - Scalability – easily handles increasing users
-    
-    - High Availability – reliable hosting infrastructure
-    
-    - Cost Efficiency – pay-as-you-go pricing
-    
-    - Security – controlled access and permissions
-    
-
 **Challenges faced**
 
     - Corrected mismatches where the code looked for .png but the file was actually .jpg.
