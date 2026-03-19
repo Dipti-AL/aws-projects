@@ -14,7 +14,7 @@
 
 **Architecture Flow**
 
-    1. The user accesses the website through a web browser.    
+    1. The user accesses the website through a web browser. 
     
     2. The request is sent to the Amazon S3 static website endpoint.   
     
@@ -23,8 +23,11 @@
     4. The website is rendered in the user’s browser.    
     
     5. This architecture is serverless, meaning:
+    
         - No EC2 instances are required    
+        
         - No backend server management is needed
+        
         - AWS handles availability and scalability automatically
 
 **AWS Services Used**
