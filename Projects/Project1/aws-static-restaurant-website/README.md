@@ -68,19 +68,19 @@
 
     To make the application more dynamic and production-ready:
 
-    1. **User Authentication**
+    **1. User Authentication**
     
         Amazon Cognito for login and sign-up
     
-    2. **Backend Processing**
+    **2. Backend Processing**
     
         AWS Lambda for handling orders and bookings
     
-    3. **Database**
+   ** 3. Database**
     
         Amazon DynamoDB for storing customer data
     
-    4. **API Integration**
+    **4. API Integration**
 
         API Gateway to connect frontend and backend
 
