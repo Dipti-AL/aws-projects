@@ -33,6 +33,7 @@
         - AWS handles availability and scalability automatically
         
 **Project Structure**
+
 ```text
     aws-static-restaurant/
             ├── index.html
@@ -50,6 +51,7 @@
             │   └── ContactUs.png
             │   └── ContactUs2.png
             └── README.md
+
 
 **AWS Services Used**
 
