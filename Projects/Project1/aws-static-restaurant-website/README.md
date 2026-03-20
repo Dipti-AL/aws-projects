@@ -64,7 +64,7 @@ http://keto-life-restuarant.s3-website-us-west-2.amazonaws.com
             │   ├── cauliflower.jpg
             │   ├── AboutUs.png            # UI captures for documentation
             │   ├── KetoMenu.png
-            │   ├── KetoMenu.png
+            │   ├── KetoMenu2.png
             │   └── ContactUs.png
             │   └── ContactUs2.png
             └── README.md                  # Project documentation
