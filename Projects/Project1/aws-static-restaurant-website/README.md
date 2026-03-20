@@ -187,3 +187,7 @@ The integrated feedback form and direct email link ensure seamless communication
 
 This project demonstrates how a simple static website hosted on AWS can help a small business establish a digital presence and improve customer interaction. It also lays the foundation for future cloud-based enhancements such as authentication, backend processing, and database integration.
 
+**THANK YOU**
+
+
+
