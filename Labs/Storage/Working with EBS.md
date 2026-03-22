@@ -34,7 +34,11 @@ I used EC2 Instance Connect to open the terminal in the browser and connect to t
 
 ---
 
-### Configuring the file system  
+### Configuring the file system 
+
+First, I checked the existing storage:
+
+df -h
 
 Then I created a file system:
 
