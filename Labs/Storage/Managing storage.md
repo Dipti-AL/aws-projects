@@ -51,9 +51,13 @@ Creating snapshot
 
 Then I created the snapshot using the volume ID.
 
+![image](images/image21.png)
+
 Restarting instance
 
 After snapshot creation, I restarted the Processor instance.
+
+![image](images/image22.png)
 
 Automating snapshots using cron
 
@@ -63,6 +67,8 @@ echo "* * * * * /usr/bin/aws ec2 create-snapshot --volume-id vol-054f2adc5c57aaa
 crontab cronjob
 
 After waiting for a few minutes, multiple snapshots were created.
+
+![image](images/image24.png)
 
 Managing snapshots using Python script
 
@@ -81,6 +87,14 @@ Verifying remaining snapshots
 Finally, I checked the snapshots again and confirmed that only the latest snapshots were left.
 
 aws ec2 describe-snapshots --filters "Name=volume-id,Values=vol-054f2adc5c57aaa5b" --query 'Snapshots[*].SnapshotId'
-Conclusion
+
+Result:
+[ec2-user@ip-10-5-0-230 ~]$ aws ec2 describe-snapshots --filters "Name=volume-id,Values=vol-054f2adc5c57aaa5b" --query 'Snapshots[*].SnapshotId'
+[
+    "snap-013ab40a16c4302bb",
+    "snap-0bee9f041a46ce54f"
+]
+
+**Conclusion**
 
 This lab helped me understand how to manage EBS snapshots using AWS CLI. I learned how to automate snapshot creation using cron and how to clean up old snapshots using a Python script. This is useful for maintaining backups without unnecessary storage usage.
