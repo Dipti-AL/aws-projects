@@ -18,7 +18,7 @@ I started by navigating to the DynamoDB service in the AWS console and selecting
 
 ![Create Table Config](lab275_images/1.png)
 
-[cite_start]After confirming the settings, I waited a moment for the table status to show as "Active". 
+After confirming the settings, I waited a moment for the table status to show as "Active". 
 
 ![Table Active Status](lab275_images/2.png)
 
