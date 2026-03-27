@@ -1,8 +1,9 @@
-# [cite_start]Lab 275: Introduction to Amazon DynamoDB [cite: 37]
+# Lab 275: Introduction to Amazon DynamoDB [cite: 37]
 
-[cite_start]In this lab, I continued my AWS learning by exploring Amazon DynamoDB. [cite: 38] 
+In this lab, I continued my AWS learning by exploring Amazon DynamoDB. 
 
 Here is what I accomplished:
+
 * Created an Amazon DynamoDB table
 * Entered data into an Amazon DynamoDB table
 * Queried an Amazon DynamoDB table 
