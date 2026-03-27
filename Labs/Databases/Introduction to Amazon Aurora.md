@@ -23,26 +23,26 @@ Before jumping into the steps, here is a quick overview of the services used:
 ### Step 1: Create the Database
 I logged into the AWS console and selected "Create database" using the Full configuration option.
 
-![Database Creation](lab274_images/step_1.png)
+![Database Creation](lab274_images/1.png)
 
 ### Step 2: Configure the EC2 Linux Instance
 I logged into the pre-created EC2 instance using Session Manager. To get the necessary database client tools, I installed MariaDB by running `sudo yum install mariadb -y`. 
 
 I then went back to the AWS RDS dashboard and waited until `aurora-instance-1` displayed a status of "Available".
 
-![Database Available](lab274_images/step_2.png)
+![Database Available](lab274_images/2.png)
 
 ### Step 3: Connect to Aurora
 I grabbed the database endpoint from the console: `aurora-instance-1.ce7atpjywfme.us-west-2.rds.amazonaws.com`. Using the MariaDB client on the EC2 instance, I connected to the Aurora database.
 
-![Connect to Aurora](lab274_images/step_3.png)
+![Connect to Aurora](lab274_images/3.png)
 
 ### Step 4: Create Tables, Insert, and Query Data
 With the connection established, I created a new table to verify functionality.
 
-![Show Databases](lab274_images/step_4.png)
+![Show Databases](lab274_images/4.png)
 
-![Create Table](lab274_images/step_5.png)
+![Create Table](lab274_images/5.png)
 
 Next, I inserted test records into the database. Here is the SQL I ran:
 
