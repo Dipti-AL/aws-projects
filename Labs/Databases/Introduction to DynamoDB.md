@@ -48,7 +48,7 @@ Instead of running a full scan, I used the Query function to efficiently find sp
 
 ### Step 5: Clean Up
 
-To wrap up the lab and ensure I didn't leave unnecessary resources running, I deleted the table. [cite: 51] [cite_start]I selected the table, opened the update settings, and executed the delete table command. 
+To wrap up the lab and ensure I didn't leave unnecessary resources running, I deleted the table. I selected the table, opened the update settings, and executed the delete table command. 
 
 ![Delete Table](lab275_images/7.png)
 
