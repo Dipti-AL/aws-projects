@@ -1,4 +1,4 @@
-# Lab 179: Migrating to Amazon RDS
+## Lab 179: Migrating to Amazon RDS
 
 In this lab, I walked through the process of migrating a local database to Amazon RDS. To establish a baseline, I started by placing an order on the cafe menu, checking the order history, and saving it.
 
