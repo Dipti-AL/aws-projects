@@ -67,7 +67,7 @@ Click on RDS and interact with the database:
 
 ![Solution](lab160_images/step_8.png)
 
-Challenge faced:
+**Challenge faced:**
 
 In the final step, while connecting to RDS from app, I got below error:
 “Unable to Establish Connection....”
@@ -82,7 +82,7 @@ Issue is:
 RDS MySQL is using: caching_sha2_password (default in MySQL 8)
 and the PHP (mysqli client) is too old to support it.
 
-Solution:
+**Solution:**
 
 Update MySQL user to use: mysql_native_password
 To do that run below command to connect to RDS from EC2:
