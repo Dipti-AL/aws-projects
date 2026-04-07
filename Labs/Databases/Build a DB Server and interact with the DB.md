@@ -8,12 +8,12 @@ I just finished a challenge lab where I had to set up an Amazon RDS database fro
 
 First, I had to launch the database using either Amazon Aurora or MySQL. I went with a **MySQL engine**. There were some specific lab restrictions I had to follow to keep things within the free tier:
 
-* **Template**: I chose the **Dev/Test** or **Free tier**.
+* **Template**: I chose the **Dev/Test**.
 * **Availability**: I avoided creating a standby instance to keep it simple.
-* **Instance Class**: I used a burstable **db.t3.micro** instance.
-* **Storage**: I set it to **20 GB** using **General Purpose SSD (gp2)**.
-* **Networking**: I made sure it was launched inside the **Lab VPC**.
-* **Monitoring**: I disabled **Enhanced Monitoring** as required.
+* **Instance Class**: Used a burstable **db.t3.micro** instance.
+* **Storage**: Set it to **20 GB** using **General Purpose SSD (gp2)**.
+* **Networking**: Made sure it was launched inside the **Lab VPC**.
+* **Monitoring**: Disabled **Enhanced Monitoring** as required.
 
 ![Database Creation Progress](lab162_images/1.png)
 
@@ -25,10 +25,10 @@ I made sure to save my credentials like the endpoint, username (`admin`), and pa
 
 The database was up, but it was locked down. I had to go into the **Web Security Group** and add a new inbound rule so my Linux server could actually talk to the RDS instance.
 
-* **Type**: MySQL/Aurora.
-* **Protocol**: TCP.
-* **Port**: 3306.
-* **Source**: I set the rule to allow the database to be accessed through port 3306.
+* **Type**: MySQL/Aurora
+* **Protocol**: TCP
+* **Port**: 3306
+* **Source**: I set the rule to allow the database to be accessed through port 3306
 
 ![Security Group Inbound Rules](lab162_images/2.png)
 
