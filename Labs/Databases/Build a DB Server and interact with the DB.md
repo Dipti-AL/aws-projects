@@ -44,12 +44,19 @@ This is where it got tricky. I logged into my Linux server via Putty and install
 
 ![Installing MySQL on EC2](lab162_images/4.png)
 
-However, when I tried to connect, I got a nasty error: `ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded`.
+However, when I tried to connect, I got an error: `ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded`.
 
 ![Authentication Error Message](lab162_images/5.png)
 
 **The Problem**: The MySQL client on the EC2 was too old to support the new authentication used by MySQL 8.
-**The Solution**: Instead of messing with broken libraries on the server, I used **Docker** to run a modern MySQL 8 client.
+
+**Option 1**: Choose old version of mySQL engine like 5.7 while database creation.
+
+OR
+
+If the database is already created and you don’t want to repeat creation process use below solution.
+
+**Option 2**: Instead of messing with broken libraries on the server, I used **Docker** to run a modern MySQL 8 client.
 
 **The commands I used:**
 
