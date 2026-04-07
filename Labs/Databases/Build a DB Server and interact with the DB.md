@@ -1,4 +1,4 @@
-# Lab 162: My Journey Building an RDS Server and Connecting via EC2
+# Lab 162: Building an RDS Server and Connecting via EC2
 
 I just finished a challenge lab where I had to set up an Amazon RDS database from scratch and get it talking to a Linux server. It was a great exercise in networking, security, and a bit of unexpected troubleshooting with Docker.
 
