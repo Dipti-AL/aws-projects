@@ -13,7 +13,7 @@ First, I had to launch the database using either **Amazon Aurora** or **MySQL**.
 * **Networking**: I made sure it was launched inside the **Lab VPC**.
 * **Monitoring**: I disabled **Enhanced Monitoring** in the settings.
 
-![1.png]
+![lab162_images/1.png]
 
 I made sure to save my credentials like the endpoint, username (`admin`), and password (`lab-password`) since I'd need those to log in later.
 
@@ -27,7 +27,7 @@ The database was up, but it was locked down. I had to go into the **Security Gro
 * **Port**: 3306.
 * **Source**: I set the rule to allow the database to be accessed.
 
-![2.png]
+![lab162_images/2.png]
 
 ---
 
