@@ -10,7 +10,6 @@ As a Cloud Support Engineer at AWS, I investigated a customer ticket regarding a
 I replicated the customer's environment to analyze why Instance A was isolated. I found that although both instances were in the same Lab VPC, their IP configurations were different:
 
 * **Instance B (i-06aee1c4d89f88acb)**: Configured with both a Public IPv4 (35.88.78.81) and a Private IPv4 address (10.0.10.153).
-* 
 * **Instance A (i-041a4f2a8b447a864)**: Configured with only a Private IPv4 address (10.0.10.127). It lacks a public entry point.
 
 ![Instance B Networking Tab](lab261_262_images/1.png)
