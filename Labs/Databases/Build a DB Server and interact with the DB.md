@@ -5,42 +5,77 @@ I just finished a challenge lab where I had to set up an Amazon RDS database fro
 ---
 
 ## Step 1: Provisioning the RDS Instance
-First, I had to launch the database using either **Amazon Aurora** or **MySQL**. I went with a **MySQL engine**. There were some specific lab restrictions I had to follow to keep things within the free tier:
+
+First, I had to launch the database using either Amazon Aurora or MySQL. I went with a **MySQL engine**. There were some specific lab restrictions I had to follow to keep things within the free tier:
 
 * **Template**: I chose the **Dev/Test** or **Free tier**.
-* **Instance Class**: I used a burstable **db.t3** instance.
+* **Availability**: I avoided creating a standby instance to keep it simple.
+* **Instance Class**: I used a burstable **db.t3.micro** instance.
 * **Storage**: I set it to **100 GB** using **General Purpose SSD (gp2)**.
 * **Networking**: I made sure it was launched inside the **Lab VPC**.
-* **Monitoring**: I disabled **Enhanced Monitoring** in the settings.
+* **Monitoring**: I disabled **Enhanced Monitoring** as required.
 
-![lab162_images/1.png]
+![Database Creation Progress](lab162_images/1.png)
 
 I made sure to save my credentials like the endpoint, username (`admin`), and password (`lab-password`) since I'd need those to log in later.
 
 ---
 
 ## Step 2: Fixing the Security Group
-The database was up, but it was locked down. I had to go into the **Security Group** and add a new inbound rule so my Linux server could actually talk to the RDS instance.
+
+The database was up, but it was locked down. I had to go into the **Web Security Group** and add a new inbound rule so my Linux server could actually talk to the RDS instance.
 
 * **Type**: MySQL/Aurora.
 * **Protocol**: TCP.
 * **Port**: 3306.
-* **Source**: I set the rule to allow the database to be accessed.
+* **Source**: I set the rule to allow the database to be accessed through port 3306.
 
-![lab162_images/2.png]
+![Security Group Inbound Rules](lab162_images/2.png)
+
+After saving the rules, the database was successfully created and ready for a connection.
+
+![Database Created Successfully](lab162_images/3.png)
 
 ---
 
 ## Step 3: Dealing with the "Authentication Plugin" Error
-This is where it got tricky. I logged into my Linux server via Putty and installed the default MySQL client. However, when I tried to connect, I got a nasty error: `ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded`.
+
+This is where it got tricky. I logged into my Linux server via Putty and installed the default MySQL client.
+
+![Installing MySQL on EC2](lab162_images/4.png)
+
+However, when I tried to connect, I got a nasty error: `ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded`.
+
+![Authentication Error Message](lab162_images/5.png)
 
 **The Problem**: The MySQL client on the EC2 was too old to support the new authentication used by MySQL 8.
 **The Solution**: Instead of messing with broken libraries on the server, I used **Docker** to run a modern MySQL 8 client.
 
 **The commands I used:**
+
 ```bash
 sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
 # I logged out and back in here to apply the group change
 sudo docker run -it --rm mysql:8 mysql -h [my-rds-endpoint] -u admin -p
+```
+
+## Step 4: Interacting with the Data
+
+Once I was finally in, I switched to my database using USE mydb and started building my tables.
+
+Creating the Tables
+I created the RESTART table for student info and inserted 10 rows of dummy data.
+
+Running an Inner Join
+To wrap things up, I created a second table called CLOUD_PRACTITIONER and ran an INNER JOIN to see which students from the main list had actually finished their certification.
+
+**What I Learned:**
+
+RDS Setup: How to navigate the AWS console to spin up a managed DB while following specific instance constraints.
+
+Security: The importance of matching port 3306 in security groups to allow traffic between tiers.
+
+Troubleshooting: Using Docker is a lifesaver when you run into "version hell" with OS packages.
+
