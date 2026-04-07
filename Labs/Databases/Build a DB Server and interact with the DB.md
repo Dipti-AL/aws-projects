@@ -66,8 +66,12 @@ Instead of messing with broken libraries on the server, I used **Docker** to run
 sudo yum install -y docker
 sudo service docker start
 sudo usermod -a -G docker ec2-user
+```
+
 # I logged out and back in here to apply the group change
-sudo docker run -it --rm mysql:8 mysql -h [my-rds-endpoint] -u admin -p
+
+```bash
+sudo docker run -it --rm mysql:8 mysql -h database-1.cxqn1etpunem.us-west-2.rds.amazonaws.com -u admin -p
 ```
 
 ## Step 4: Interacting with the Data
