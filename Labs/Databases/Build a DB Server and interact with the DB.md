@@ -46,7 +46,7 @@ This is where it got tricky. I logged into my Linux server via Putty and install
 
 However, when I tried to connect, I got an error: `ERROR 2059 (HY000): Authentication plugin 'caching_sha2_password' cannot be loaded`.
 
-![Authentication Error Message](lab162_images/5.png)
+
 
 **The Problem**: The MySQL client on the EC2 was too old to support the new authentication used by MySQL 8.
 
@@ -75,8 +75,14 @@ Once I was finally in, I switched to my database using USE mydb and started buil
 Creating the Tables
 I created the RESTART table for student info and inserted 10 rows of dummy data.
 
+![Create RESTART table](lab162_images/5.png)
+
+![Add dummy rows](lab162_images/6.png)
+
 Running an Inner Join
 To wrap things up, I created a second table called CLOUD_PRACTITIONER and ran an INNER JOIN to see which students from the main list had actually finished their certification.
+
+![Running an Inner Join](lab162_images/7.png)
 
 **What I Learned:**
 
