@@ -11,7 +11,7 @@ First, I had to launch the database using either Amazon Aurora or MySQL. I went 
 * **Template**: I chose the **Dev/Test** or **Free tier**.
 * **Availability**: I avoided creating a standby instance to keep it simple.
 * **Instance Class**: I used a burstable **db.t3.micro** instance.
-* **Storage**: I set it to **100 GB** using **General Purpose SSD (gp2)**.
+* **Storage**: I set it to **20 GB** using **General Purpose SSD (gp2)**.
 * **Networking**: I made sure it was launched inside the **Lab VPC**.
 * **Monitoring**: I disabled **Enhanced Monitoring** as required.
 
