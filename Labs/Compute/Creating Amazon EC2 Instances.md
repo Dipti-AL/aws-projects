@@ -16,6 +16,7 @@ Figure 1: Bastion host creation and configuration.
  ![Bastion Host Creation 2](images/bastion_host_creation_2.png)
  
 Figure 2: Bastion host creation and configuration.
+
 ![Bastion Host Creation 3](images/bastion_host_creation_3.png)
  
 Figure 3: Bastion host creation and configuration.
@@ -72,6 +73,7 @@ Figure: Security group configuration fix.
 **Challenge 2 – Fix Web Server Installation**
 
 The web page initially did not load because HTTP (port 80) was not allowed in the security group and the Apache web server was not started. After adding the HTTP rule and starting Apache, the page loaded correctly.
+
 
 Command used: sudo systemctl start httpd
 
