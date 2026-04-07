@@ -48,15 +48,17 @@ However, when I tried to connect, I got an error: `ERROR 2059 (HY000): Authentic
 
 
 
-**The Problem**: The MySQL client on the EC2 was too old to support the new authentication used by MySQL 8.
+**The Problem**: 
+The MySQL client on the EC2 was too old to support the new authentication used by MySQL 8.
 
-**Option 1**: Choose old version of mySQL engine like 5.7 while database creation.
+**Option 1**: 
+Choose old version of mySQL engine like 5.7 while database creation.
 
 OR
 
+**Option 2**: 
 If the database is already created and you don’t want to repeat creation process use below solution.
-
-**Option 2**: Instead of messing with broken libraries on the server, I used **Docker** to run a modern MySQL 8 client.
+Instead of messing with broken libraries on the server, I used **Docker** to run a modern MySQL 8 client.
 
 **The commands I used:**
 
