@@ -76,7 +76,11 @@ sudo docker run -it --rm mysql:8 mysql -h database-1.cxqn1etpunem.us-west-2.rds.
 
 ## Step 4: Interacting with the Data
 
-Once I was finally in, I switched to my database using USE mydb and started building my tables.
+Once I was finally in, I switched to my database using 
+```bash
+USE mydb
+```
+and started building my tables.
 
 Creating the Tables
 I created the RESTART table for student info and inserted 10 rows of dummy data.
