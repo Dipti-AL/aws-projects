@@ -22,9 +22,13 @@ After updating associations, the VPC now had properly configured public and priv
 
 ![Route Table Updated](lab267_images/5.png)
 
+Now edit subnet association.
+
+![Edit subnet association](lab267_images/6.png)
+
 Next, I created a security group for the web server to control inbound traffic.
 
-![Security Group](lab267_images/6.png)
+![Security Group](lab267_images/7.png)
 
 After that, I launched an EC2 instance to host a web server. I named it Web Server 1 and selected Amazon Linux 2 as the AMI with instance type t3.micro. I placed the instance inside LabVPC under Public Subnet 2, enabled auto-assign public IP, and attached the Web Security Group. I also used a user data script to install Apache, PHP, and download the web application.
 
@@ -45,6 +49,7 @@ After the instance launched successfully, I tried accessing the web application 
 
 To identify the issue, I tried to connect to the EC2 instance but couldn’t. When checked the Security group doesn’t contain any inbound rule for SSH. So, added the required inbound rule (SSH, port 22) for the security group.
 Once done logged in to the web server and checked the status for the Apache server.
+
 ```bash
 [ec2-user@ip-10-0-2-120 ~]$ sudo systemctl status httpd
 
@@ -74,7 +79,11 @@ sudo systemctl enable httpd
 ```
 
 Verify service
+
+```bash
 sudo systemctl status httpd
+```
+
 ![Verify Service](lab267_images/8.png)
 
 Then I downloaded the application files manually into /var/www/html, extracted them, and restarted Apache:
