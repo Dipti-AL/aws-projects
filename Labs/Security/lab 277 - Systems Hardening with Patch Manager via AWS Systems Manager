@@ -4,93 +4,106 @@ In this lab, I used AWS Systems Manager Patch Manager to perform automated patch
 
 ---
 
+## Fleet Manager Verification
+
 I first went to **AWS Systems Manager → Fleet Manager**.
 
-As part of the lab setup, there were 6 EC2 instances available (3 Linux and 3 Windows). These instances already had the required IAM role attached for Systems Manager access, which is why they appeared in Fleet Manager.
+As part of the lab setup, there were 6 EC2 instances (3 Linux and 3 Windows). These instances were managed using an IAM role for Systems Manager access.
 
 ![Fleet Manager View](lab277_images/1.png)
 
 ---
 
-Next, I went to **Systems Manager → Node Management → Patch Manager** and selected **Patch now**.
+## Linux Patch Management (Default Baseline)
 
-For Linux instances, I used the default patch baseline:
+I navigated to **Systems Manager → Patch Manager → Patch now**.
+
+I selected the default patch baseline:
 
 `AWS-AmazonLinux2DefaultPatchBaseline`
 
-I configured the following:
-- Patching operation: Scan and install  
+### Configuration:
+- Operation: Scan and install  
 - Reboot option: Reboot if needed  
-- Instances: Selected using tags  
-- Tag key: Patch Group  
-- Tag value: LinuxProd  
+- Target selection: Instance tags  
+- Patch Group: LinuxProd  
 
-Then I initiated the patch operation.
+After configuration, I started the patch job.
 
 ![Linux Patch Configuration](lab277_images/2.png)
 
 ---
 
-The patch execution summary showed that all Linux instances were successfully scanned and patched.
+## Linux Patch Execution Result
+
+The patch job successfully scanned and patched all Linux instances.
 
 ![Linux Patch Execution Summary](lab277_images/3.png)
 
 ---
 
-Next, I created a custom patch baseline for Windows instances.
+## Windows Patch Baseline Creation
 
-I went to **Systems Manager → Patch Manager → Patch Baselines → Create patch baseline**.
+I created a custom patch baseline for Windows instances.
 
-I selected:
+Path:
+**Systems Manager → Patch Manager → Patch Baselines → Create Patch Baseline**
+
+Baseline used:
 `WindowsServerSecurityUpdates`
-
-Then I created the baseline and added the required rule.
 
 ![Create Windows Patch Baseline](lab277_images/4.png)
 
 ---
 
-After that, I assigned the patch group to the baseline.
+## Windows Patch Group Assignment
 
-From **Actions → Modify Patch Group**, I added:
+I assigned the patch group to the custom baseline:
 
 `WindowsProd`
 
----
-
-Then I went to EC2 and updated tags for all Windows instances:
+Then I updated tags on EC2 instances:
 
 - Key: Patch Group  
 - Value: WindowsProd  
-
-This ensured the instances were mapped to the correct patch baseline.
 
 ![Windows Patch Group Tagging](lab277_images/5.png)
 
 ---
 
-Next, I went back to **Patch Manager → Patch now** and selected the Windows instances using tags.
+## Windows Patch Execution
 
-I configured:
+I went back to Patch Manager and selected **Patch now**.
+
+### Configuration:
 - Operation: Scan and install  
+- Target: Instance tags  
 - Patch Group: WindowsProd  
 
-Then I started the patching process.
+Patch execution was initiated successfully.
 
 ![Windows Patch Execution](lab277_images/6.png)
 
 ---
 
-Finally, I verified compliance under **Patch Manager → Compliance Reporting**.
+## Patch Compliance Verification
 
-All Linux and Windows instances showed **Compliant** status after patching.
+Finally, I checked compliance under:
+
+**Systems Manager → Patch Manager → Compliance Reporting**
+
+All Linux and Windows instances were marked **Compliant**.
 
 ![Patch Compliance Report](lab277_images/7.png)
 
 ---
 
+## Conclusion
+
 In this lab, I learned how to:
-- Patch Linux instances using AWS default patch baseline  
-- Create and apply custom patch baselines for Windows  
-- Use patch groups to control patch deployment  
-- Verify patch compliance using Systems Manager  
+
+- Automate patching using AWS Systems Manager Patch Manager  
+- Use default patch baselines for Linux  
+- Create custom patch baselines for Windows  
+- Use patch groups for controlled deployments  
+- Verify patch compliance across multiple OS environments  
