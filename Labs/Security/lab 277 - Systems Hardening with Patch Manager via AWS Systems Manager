@@ -9,3 +9,88 @@ I first went to **AWS Systems Manager → Fleet Manager**.
 As part of the lab setup, there were 6 EC2 instances available (3 Linux and 3 Windows). These instances already had the required IAM role attached for Systems Manager access, which is why they appeared in Fleet Manager.
 
 ![lab277_1](lab_277_images/lab277_1.png)
+
+---
+
+Next, I went to **Systems Manager → Node Management → Patch Manager** and selected **Patch now**.
+
+For Linux instances, I used the default patch baseline:
+
+`AWS-AmazonLinux2DefaultPatchBaseline`
+
+I configured the following:
+- Patching operation: Scan and install  
+- Reboot option: Reboot if needed  
+- Instances: Selected using tags  
+- Tag key: Patch Group  
+- Tag value: LinuxProd  
+
+Then I initiated the patch operation.
+
+![lab277_2](lab_277_images/lab277_2.png)
+
+---
+
+The patch execution summary showed that all Linux instances were successfully scanned and patched.
+
+![lab277_3](lab_277_images/lab277_3.png)
+
+---
+
+Next, I created a custom patch baseline for Windows instances.
+
+I went to **Systems Manager → Patch Manager → Patch Baselines → Create patch baseline**.
+
+I selected:
+`WindowsServerSecurityUpdates`
+
+Then I created the baseline and added a rule as required.
+
+![lab277_4](lab_277_images/lab277_4.png)
+
+---
+
+After that, I assigned the patch group to the baseline.
+
+From **Actions → Modify Patch Group**, I added:
+
+`WindowsProd`
+
+---
+
+Then I went to EC2 and updated tags for all Windows instances:
+
+- Key: Patch Group  
+- Value: WindowsProd  
+
+This ensured the instances were mapped to the correct patch baseline.
+
+![lab277_5](lab_277_images/lab277_5.png)
+
+---
+
+Next, I went back to **Patch Manager → Patch now** and selected the Windows instances using tags.
+
+I configured:
+- Operation: Scan and install  
+- Patch Group: WindowsProd  
+
+Then I started the patching process.
+
+![lab277_6](lab_277_images/lab277_6.png)
+
+---
+
+Finally, I verified compliance under **Patch Manager → Compliance Reporting**.
+
+All Linux and Windows instances showed **Compliant** status after patching.
+
+![lab277_7](lab_277_images/lab277_7.png)
+
+---
+
+In this lab, I learned how to:
+- Patch Linux instances using AWS default patch baseline  
+- Create and apply custom patch baselines for Windows  
+- Use patch groups to control patch deployment  
+- Verify patch compliance using Systems Manager  
