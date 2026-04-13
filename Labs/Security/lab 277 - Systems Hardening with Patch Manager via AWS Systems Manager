@@ -1,0 +1,122 @@
+# Lab 277 – Systems Hardening with Patch Manager via AWS Systems Manager
+
+## Overview
+In this lab, I worked with AWS Systems Manager Patch Manager to apply patches and improve the security posture of EC2 instances. I patched Linux instances using the default baseline, created a custom patch baseline for Windows, and verified patch compliance.
+
+---
+
+## Objectives
+- Patch Linux instances using the default patch baseline
+- Create a custom patch baseline for Windows
+- Use patch groups for targeted patching
+- Apply patches to EC2 instances
+- Verify patch compliance
+
+---
+
+## Step 1: Verify Managed Instances
+- Navigated to **AWS Systems Manager → Fleet Manager**
+- Observed 6 EC2 instances:
+  - 3 Linux instances
+  - 3 Windows instances
+- These instances are managed via Systems Manager using IAM roles
+
+![Fleet Manager Instances](lab_276_images/lab277_1.png)
+
+---
+
+## Step 2: Review Patch Manager
+- Navigated to **Systems Manager → Node Management → Patch Manager**
+- Reviewed the overview section
+
+![Patch Manager Overview](lab_276_images/lab277_2.png)
+
+---
+
+## Step 3: Patch Linux Instances (Default Baseline)
+- Clicked **Patch now**
+- Configured:
+  - **Patching operation:** Scan and install
+  - **Reboot option:** Reboot if needed
+  - **Instances to patch:** Patch only the target instances I specify
+  - **Target selection:** Specify instance tags
+  - **Tag key:** Patch Group
+  - **Tag value:** LinuxProd
+
+- Clicked **Add** → **Patch now**
+
+![Patch Linux Config](lab_276_images/lab277_3.png)
+
+---
+
+## Step 4: Monitor Patch Operation
+- Viewed the **Operation Summary**
+- Checked the **Resources panel** to see impacted instances
+
+![Patch Operation Summary](lab_276_images/lab277_4.png)
+
+---
+
+## Step 5: Create Custom Patch Baseline for Windows
+- Navigated to **Patch Manager → Patch Baselines**
+- Clicked **Create patch baseline**
+- Added rules for Windows updates (e.g., security updates)
+
+![Create Patch Baseline](lab_276_images/lab277_5.png)
+
+---
+
+## Step 6: Assign Patch Group to Baseline
+- Selected the newly created patch baseline
+- Chose **Actions → Modify Patch Group**
+- Added patch group: `WindowsProd`
+
+![Assign Patch Group](lab_276_images/lab277_6.png)
+
+---
+
+## Step 7: Tag Windows Instances
+- Navigated to **EC2 Console**
+- For each Windows instance:
+  - Added tag:
+    - **Key:** Patch Group
+    - **Value:** WindowsProd
+
+![Tag Windows Instances](lab_276_images/lab277_7.png)
+
+---
+
+## Step 8: Patch Windows Instances
+- Returned to **Systems Manager → Patch Manager**
+- Clicked **Patch now**
+- Configured:
+  - **Patching operation:** Scan and install
+  - **Target selection:** Specify instance tags
+  - **Tag key:** Patch Group
+  - **Tag value:** WindowsProd
+
+- Started the patching process
+
+![Patch Windows Config](lab_276_images/lab277_8.png)
+
+---
+
+## Step 9: Verify Patch Compliance
+- Navigated to **Patch Manager → Compliance Reporting**
+- Verified that all instances are compliant
+
+![Compliance Report](lab_276_images/lab277_9.png)
+
+---
+
+## Key Learnings
+- Patch Manager automates patching across EC2 instances
+- Patch baselines define which updates are approved
+- Patch groups help target instances using tags
+- Custom baselines provide control over Windows updates
+- Compliance reporting helps track patch status
+
+---
+
+## Conclusion
+This lab helped me understand how to use AWS Systems Manager Patch Manager to manage patching across both Linux and Windows environments. I was able to apply patches, create a custom baseline, and verify compliance successfully.
