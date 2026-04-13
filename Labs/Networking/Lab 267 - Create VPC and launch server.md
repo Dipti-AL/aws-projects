@@ -38,17 +38,44 @@ service httpd start
 
 ```
 
+## Issue:
+
 After the instance launched successfully, I tried accessing the web application using the public DNS, but the page was not reachable and showed a connection refused error.
 
-To troubleshoot, I checked the security group and found that SSH inbound rules were missing, so I added port 22 access. After that, I connected to the instance and checked Apache status, but the service was not running. The issue was caused by the user data script failing due to the mysql package, which is deprecated on Amazon Linux 2 and causes installation failure, preventing Apache from being installed.
 
-To fix this, I manually installed the required packages and started Apache:
+To identify the issue, I tried to connect to the EC2 instance but couldn’t. When checked the Security group doesn’t contain any inbound rule for SSH. So, added the required inbound rule (SSH, port 22) for the security group.
+Once done logged in to the web server and checked the status for the Apache server.
+```bash
+[ec2-user@ip-10-0-2-120 ~]$ sudo systemctl status httpd
+
+Unit httpd.service could not be found.
+```
+
+The apache httpd service is down. Looks like the script in User data did not install the required Apache service and other libraries so need to run the script directly on the server. 
+
+This is because of package mysql. In the script:
+
+```bash
+yum install -y httpd mysql php
+```
+
+In User data, if one package fails others are also not installed without fallback or retry.
+On Amazon Linux 2, the mysql package: is deprecated in default repos Its replaced by mariadb or mysql-server
+
+
+## Solution
+
+To fix this, SSH to the web server and Install Apache properly (without mysql) and started Apache:
 
 ```bash
 sudo yum install -y httpd php unzip
 sudo systemctl start httpd
 sudo systemctl enable httpd
 ```
+
+Verify service
+sudo systemctl status httpd
+![Verify Service](lab267_images/8.png)
 
 Then I downloaded the application files manually into /var/www/html, extracted them, and restarted Apache:
 
@@ -60,6 +87,8 @@ sudo systemctl restart httpd
 ```
 
 After this, the web server started working successfully and I was able to access the application using the EC2 public DNS.
+
+![Testing](lab267_images/9.png)
 
 Alternatively, I noted that the correct approach is to fix the user data script by removing mysql and using only httpd, php, and unzip, ensuring Apache installs correctly during launch:
 
