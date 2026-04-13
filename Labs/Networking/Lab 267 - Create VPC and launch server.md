@@ -99,7 +99,7 @@ After this, the web server started working successfully and I was able to access
 
 ![Testing](lab267_images/9.png)
 
-Alternatively, I noted that the correct approach is to fix the user data script by removing mysql and using only httpd, php, and unzip, ensuring Apache installs correctly during launch:
+Alternatively, I noted that the better approach could be to fix the user data script in the beginning itself by removing mysql and using only httpd, php, and unzip, ensuring Apache installs correctly during launch:
 
 ```bash
 #!/bin/bash
