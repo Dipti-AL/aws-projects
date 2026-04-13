@@ -1,122 +1,142 @@
-# Lab 277 – Systems Hardening with Patch Manager via AWS Systems Manager
+# Lab 277 – Systems Hardening with AWS Systems Manager Patch Manager
+
+---
 
 ## Overview
-In this lab, I worked with AWS Systems Manager Patch Manager to apply patches and improve the security posture of EC2 instances. I patched Linux instances using the default baseline, created a custom patch baseline for Windows, and verified patch compliance.
+
+This lab focuses on system hardening using **AWS Systems Manager Patch Manager**.  
+I configured automated patching for Linux and Windows EC2 instances using default and custom patch baselines, and verified patch compliance.
 
 ---
 
-## Objectives
-- Patch Linux instances using the default patch baseline
-- Create a custom patch baseline for Windows
-- Use patch groups for targeted patching
-- Apply patches to EC2 instances
-- Verify patch compliance
+## Architecture / Setup
+
+- 3 Linux EC2 instances  
+- 3 Windows EC2 instances  
+- All instances managed via AWS Systems Manager (IAM role attached)
 
 ---
 
-## Step 1: Verify Managed Instances
-- Navigated to **AWS Systems Manager → Fleet Manager**
-- Observed 6 EC2 instances:
-  - 3 Linux instances
-  - 3 Windows instances
-- These instances are managed via Systems Manager using IAM roles
+## Fleet Manager Verification
 
-![Fleet Manager Instances](lab_276_images/lab277_1.png)
+Path:
+`AWS Systems Manager → Fleet Manager`
 
----
+All 6 EC2 instances were visible as managed nodes.
 
-## Step 2: Review Patch Manager
-- Navigated to **Systems Manager → Node Management → Patch Manager**
-- Reviewed the overview section
-
-![Patch Manager Overview](lab_276_images/lab277_2.png)
+![Fleet Manager](lab_277_images/lab277_1.png)
 
 ---
 
-## Step 3: Patch Linux Instances (Default Baseline)
-- Clicked **Patch now**
-- Configured:
-  - **Patching operation:** Scan and install
-  - **Reboot option:** Reboot if needed
-  - **Instances to patch:** Patch only the target instances I specify
-  - **Target selection:** Specify instance tags
-  - **Tag key:** Patch Group
-  - **Tag value:** LinuxProd
+## Linux Patch Management (Default Baseline)
 
-- Clicked **Add** → **Patch now**
+Path:
+`Systems Manager → Patch Manager → Patch now`
 
-![Patch Linux Config](lab_276_images/lab277_3.png)
+Baseline used:
+`AWS-AmazonLinux2DefaultPatchBaseline`
 
----
+### Configuration
 
-## Step 4: Monitor Patch Operation
-- Viewed the **Operation Summary**
-- Checked the **Resources panel** to see impacted instances
+- Operation: Scan and install  
+- Reboot option: Reboot if needed  
+- Target: Instances selected by tag  
+- Tag filter:
+  - Key: `Patch Group`
+  - Value: `LinuxProd`
 
-![Patch Operation Summary](lab_276_images/lab277_4.png)
+Execution was started after configuration.
 
----
-
-## Step 5: Create Custom Patch Baseline for Windows
-- Navigated to **Patch Manager → Patch Baselines**
-- Clicked **Create patch baseline**
-- Added rules for Windows updates (e.g., security updates)
-
-![Create Patch Baseline](lab_276_images/lab277_5.png)
+![Linux Patch Configuration](lab_277_images/lab277_2.png)
 
 ---
 
-## Step 6: Assign Patch Group to Baseline
-- Selected the newly created patch baseline
-- Chose **Actions → Modify Patch Group**
-- Added patch group: `WindowsProd`
+## Linux Patch Execution Result
 
-![Assign Patch Group](lab_276_images/lab277_6.png)
+Patch Manager successfully scanned and applied updates to Linux instances.
 
----
-
-## Step 7: Tag Windows Instances
-- Navigated to **EC2 Console**
-- For each Windows instance:
-  - Added tag:
-    - **Key:** Patch Group
-    - **Value:** WindowsProd
-
-![Tag Windows Instances](lab_276_images/lab277_7.png)
+![Linux Patch Summary](lab_277_images/lab277_3.png)
 
 ---
 
-## Step 8: Patch Windows Instances
-- Returned to **Systems Manager → Patch Manager**
-- Clicked **Patch now**
-- Configured:
-  - **Patching operation:** Scan and install
-  - **Target selection:** Specify instance tags
-  - **Tag key:** Patch Group
-  - **Tag value:** WindowsProd
+## Windows Custom Patch Baseline
 
-- Started the patching process
+Path:
+`Systems Manager → Patch Manager → Patch Baselines → Create Patch Baseline`
 
-![Patch Windows Config](lab_276_images/lab277_8.png)
+- Base baseline: `WindowsServerSecurityUpdates`
+- Custom rules added
+- Patch baseline created successfully
+
+![Custom Patch Baseline](lab_277_images/lab277_4.png)
 
 ---
 
-## Step 9: Verify Patch Compliance
-- Navigated to **Patch Manager → Compliance Reporting**
-- Verified that all instances are compliant
+## Patch Group Configuration (Windows)
 
-![Compliance Report](lab_276_images/lab277_9.png)
+Path:
+`Patch Baseline → Actions → Modify Patch Group`
+
+- Patch Group: `WindowsProd`
+
+This links the custom baseline to Windows instances.
 
 ---
 
-## Key Learnings
-- Patch Manager automates patching across EC2 instances
-- Patch baselines define which updates are approved
-- Patch groups help target instances using tags
-- Custom baselines provide control over Windows updates
-- Compliance reporting helps track patch status
+## Windows Instance Tagging
+
+Path:
+`EC2 → Instances → Tags`
+
+Tag applied:
+
+- Key: `Patch Group`
+- Value: `WindowsProd`
+
+![Windows Tagging](lab_277_images/lab277_5.png)
+
+---
+
+## Windows Patch Execution
+
+Path:
+`Systems Manager → Patch Manager → Patch now`
+
+### Configuration
+
+- Operation: Scan and install  
+- Target: Instance tags  
+- Filter:
+  - `Patch Group = WindowsProd`
+
+Patch execution was initiated.
+
+![Windows Patch Execution](lab_277_images/lab277_6.png)
+
+---
+
+## Patch Compliance Check
+
+Path:
+`Systems Manager → Patch Manager → Compliance Reporting`
+
+### Result
+
+- Linux instances: Compliant  
+- Windows instances: Compliant  
+
+![Patch Compliance](lab_277_images/lab277_7.png)
 
 ---
 
 ## Conclusion
-This lab helped me understand how to use AWS Systems Manager Patch Manager to manage patching across both Linux and Windows environments. I was able to apply patches, create a custom baseline, and verify compliance successfully.
+
+This lab demonstrated:
+
+- AWS Systems Manager Patch Manager usage  
+- Default patch baseline for Linux  
+- Custom patch baseline for Windows  
+- Patch group-based deployment strategy  
+- Patch compliance validation across fleets  
+
+---
