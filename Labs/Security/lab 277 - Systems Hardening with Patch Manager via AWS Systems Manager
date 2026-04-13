@@ -8,7 +8,7 @@ I first went to **AWS Systems Manager → Fleet Manager**.
 
 As part of the lab setup, there were 6 EC2 instances available (3 Linux and 3 Windows). These instances already had the required IAM role attached for Systems Manager access, which is why they appeared in Fleet Manager.
 
-![lab277_1](lab277_images/1.png)
+![Fleet Manager View](lab277_images/1.png)
 
 ---
 
@@ -27,13 +27,13 @@ I configured the following:
 
 Then I initiated the patch operation.
 
-![lab277_2](lab_277_images/lab277_2.png)
+![Linux Patch Configuration](lab277_images/2.png)
 
 ---
 
 The patch execution summary showed that all Linux instances were successfully scanned and patched.
 
-![lab277_3](lab277_images/3.png)
+![Linux Patch Execution Summary](lab277_images/3.png)
 
 ---
 
@@ -44,9 +44,9 @@ I went to **Systems Manager → Patch Manager → Patch Baselines → Create pat
 I selected:
 `WindowsServerSecurityUpdates`
 
-Then I created the baseline and added a rule as required.
+Then I created the baseline and added the required rule.
 
-![lab277_4](lab277_images/4.png)
+![Create Windows Patch Baseline](lab277_images/4.png)
 
 ---
 
@@ -65,7 +65,7 @@ Then I went to EC2 and updated tags for all Windows instances:
 
 This ensured the instances were mapped to the correct patch baseline.
 
-![lab277_5](lab277_images/5.png)
+![Windows Patch Group Tagging](lab277_images/5.png)
 
 ---
 
@@ -77,7 +77,7 @@ I configured:
 
 Then I started the patching process.
 
-![lab277_6](lab277_images/6.png)
+![Windows Patch Execution](lab277_images/6.png)
 
 ---
 
@@ -85,7 +85,7 @@ Finally, I verified compliance under **Patch Manager → Compliance Reporting**.
 
 All Linux and Windows instances showed **Compliant** status after patching.
 
-![lab277_7](lab277_images/7.png)
+![Patch Compliance Report](lab277_images/7.png)
 
 ---
 
