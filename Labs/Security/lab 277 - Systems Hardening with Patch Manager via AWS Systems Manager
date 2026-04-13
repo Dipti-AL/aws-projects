@@ -1,1 +1,11 @@
+# Lab 277 – Systems Hardening with Patch Manager via AWS Systems Manager
 
+In this lab, I used AWS Systems Manager Patch Manager to perform automated patching of Linux and Windows EC2 instances using default and custom patch baselines. I also used patch groups to control patch deployment and verified patch compliance.
+
+---
+
+I first went to **AWS Systems Manager → Fleet Manager**.
+
+As part of the lab setup, there were 6 EC2 instances available (3 Linux and 3 Windows). These instances already had the required IAM role attached for Systems Manager access, which is why they appeared in Fleet Manager.
+
+![lab277_1](lab_277_images/lab277_1.png)
