@@ -4,9 +4,11 @@ In this lab, I created a custom VPC, configured subnets, routing, security group
 
 I started by creating a VPC using **VPC and More**, selecting 1 Availability Zone, 1 public subnet, and 1 private subnet. I renamed the resources as LabVPC, along with public and private subnets and their associated route tables.
 
+
 ![VPC Creation](lab267_images/1.png)
 
 The VPC workflow was created successfully.
+
 
 ![VPC Workflow](lab267_images/2.png)
 
@@ -52,7 +54,6 @@ Once done logged in to the web server and checked the status for the Apache serv
 
 ```bash
 [ec2-user@ip-10-0-2-120 ~]$ sudo systemctl status httpd
-
 Unit httpd.service could not be found.
 ```
 
