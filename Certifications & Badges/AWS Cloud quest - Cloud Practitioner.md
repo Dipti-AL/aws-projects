@@ -1,2 +1,2 @@
 
-![AWS Cloud Quest - Cloud Practiotioner Certificate](images/AWS Cloud Quest - Cloud Practiotioner cert.png)
+![AWS Cloud Quest - Cloud Practitioner Certificate](images/AWS Cloud Quest - Cloud Practiotioner cert.png)
